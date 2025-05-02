@@ -1,0 +1,4 @@
+To build the installer:
+- [PyInstaller](https://pyinstaller.org/)
+
+pyinstaller --onefile --windowed app.py
