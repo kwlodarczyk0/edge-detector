@@ -14,7 +14,7 @@ class TkinterApp(GUI):
         self.setup_ui()
 
     def setup_ui(self):
-        self.root.title("🖼️ App name")
+        self.root.title("Edge detector")
         self.root.geometry("500x600")
         self.root.configure(bg="#f0f0f0")
 
@@ -36,7 +36,7 @@ class TkinterApp(GUI):
         tk.Radiobutton(self.root, text="Canny edge detector", variable=self.selected_action, value="canny").pack()
         tk.Radiobutton(self.root, text="Sobel operator", variable=self.selected_action, value="sobel").pack()
         tk.Radiobutton(self.root, text="Prewitt operator", variable=self.selected_action, value="prewitt").pack()
-
+        tk.Radiobutton(self.root, text="Laplace operator", variable=self.selected_action, value="laplace").pack()
 
         tk.Label(self.root, text="Threshold:", bg="#f0f0f0").pack()
         self.threshold_entry = tk.Entry(self.root)

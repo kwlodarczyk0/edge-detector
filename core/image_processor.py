@@ -1,6 +1,7 @@
 from PIL import Image
 
 from algorithms.canny_filter import CannyFilter
+from algorithms.laplace_filter import LaplaceFilter
 from algorithms.sobel_filter import SobelFilter
 from algorithms.prewitt_filter import PrewittFilter
 
@@ -13,5 +14,7 @@ class ImageProcessor:
             return Image.fromarray(SobelFilter().filter(pil_image,threshold))
         elif filter_name == "prewitt":
             return Image.fromarray(PrewittFilter().filter(pil_image,threshold))
+        elif filter_name == "laplace":
+            return Image.fromarray(LaplaceFilter().filter(pil_image,threshold))
         else:
             raise ValueError(f"Unsupported filter: {filter_name}")
